@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -51,23 +51,23 @@ namespace FinalConsoleApp
 
         static void AddTask()
         {
-            Console.WriteLine("Enter the task description: ");
+            Console.WriteLine("Добавьте название проекта: ");
             string task = Console.ReadLine();
             toDoList.AddTask(task);
-            Console.WriteLine("Task added.");
+            Console.WriteLine("Проект добавлен.");
         }
 
         static void RemoveTask()
         {
-            Console.WriteLine("Enter the task description to remove: ");
+            Console.WriteLine("Напишите название задания для удаления: ");
             string task = Console.ReadLine();
             if (toDoList.RemoveTask(task))
             {
-                Console.WriteLine("Task removed.");
+                Console.WriteLine("Задание удалено.");
             }
             else
             {
-                Console.WriteLine("Task not found.");
+                Console.WriteLine("Задание не найдено.");
             }
         }
 
@@ -78,38 +78,38 @@ namespace FinalConsoleApp
 
         static void MarkTaskAsCompleted()
         {
-            Console.WriteLine("Enter the task description to mark as completed: ");
+            Console.WriteLine("Напишите название задания для обозначения как выполнено: ");
             string task = Console.ReadLine();
             if (toDoList.MarkTaskAsCompleted(task))
             {
-                Console.WriteLine("Task marked as completed.");
+                Console.WriteLine("Задание обозначено выполненным.");
             }
             else
             {
-                Console.WriteLine("Task not found.");
+                Console.WriteLine("Задание не найдено.");
             }
         }
 
         static void EditTaskDescription()
         {
-            Console.WriteLine("Enter the task description to edit: ");
+            Console.WriteLine("Напишите название задания для изменения: ");
             string oldTask = Console.ReadLine();
-            Console.WriteLine("Enter the new task description: ");
+            Console.WriteLine("Напишите новое название задания: ");
             string newTask = Console.ReadLine();
             if (toDoList.EditTaskDescription(oldTask, newTask))
             {
-                Console.WriteLine("Task edited.");
+                Console.WriteLine("Задание изменено.");
             }
             else
             {
-                Console.WriteLine("Task not found.");
+                Console.WriteLine("Задание не найдено.");
             }
         }
 
         static void ClearAllTasks()
         {
             toDoList.ClearTasks();
-            Console.WriteLine("All tasks cleared.");
+            Console.WriteLine("Лист очищен.");
         }
     }
 
